@@ -1,0 +1,101 @@
+// 1 maximum
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int [] arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=scn.nextInt();
+        }
+        int min = arr[0];
+        for(int i=1;i<n;i+=2){
+            if(min > arr[i]){
+                min = arr[i];
+            }
+        }
+        System.out.println(min);
+    
+}
+}
+
+
+//2 prime
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int num = sc.nextInt();
+        int count =0;
+        for(int i = 2; i*i<=num;i++){
+            if(num%i==0){
+                count = 1;
+                break;
+            }
+        }
+        System.out.println((count==0)?"prime":"not prime");
+    }
+}
+
+//3 factorial
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int fact = 1;
+        for(int i=1;i<=a;i++){
+            fact=fact*i;
+        }
+        System.out.println(fact);
+    }
+}
+
+// 4 sum of numbers
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int sum = 0;
+        while(num>0){
+            int r = num%10;
+            sum = sum+r;
+            num=num/10;
+        }
+        System.out.println(sum);
+    }
+}
+
+// 5 reverse
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int sum = 0;
+        while(num>0){
+            int r = num%10;
+            sum = sum+r;
+            num=num/10;
+        }
+        System.out.println(sum);
+    }
+}
+
+// 6 palindrome
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int ans = num;
+        int sum = 0;
+        while(num>0){
+            int r = num%10;
+            sum = sum*10+r;
+            num=num/10;
+        }
+        System.out.println((sum == ans)?"palindrome":"not palindrome");
+    }
+}
